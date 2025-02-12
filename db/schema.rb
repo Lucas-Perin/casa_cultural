@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_06_204636) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_11_203506) do
   create_table "analises", force: :cascade do |t|
     t.integer "filme_id"
     t.integer "nota"
@@ -24,6 +24,13 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_06_204636) do
     t.string "genero"
     t.text "sinopse"
     t.date "ano_lancamento"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
